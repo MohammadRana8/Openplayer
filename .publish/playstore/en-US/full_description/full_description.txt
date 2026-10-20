@@ -1,0 +1,10 @@
+OpenPlayer is a free, open-source music player for Android with no ads and no tracking. It plays the music already on your phone and never connects to the internet.
+
+This is an early alpha. Today it can:
+- Scan your device for music
+- Browse your music by folder
+- Play songs with play/pause, next/previous, repeat and shuffle
+
+Planned: artists and albums, playlists, equalizer, lyrics, notification controls and gapless playback.
+
+Open source under the MIT License: https://github.com/openplayer-project/openplayer

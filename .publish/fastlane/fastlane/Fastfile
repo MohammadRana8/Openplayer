@@ -1,0 +1,38 @@
+default_platform(:android)
+
+platform :android do
+  desc "Build and test the app (internal testing)"
+  lane :internal do
+    gradle(task: "clean")
+    gradle(task: "assembleDebug")
+  end
+
+  desc "Build a production release (AAB)"
+  lane :production do
+    gradle(task: "clean")
+    gradle(task: "bundleRelease")
+  end
+
+  desc "Build and upload to Google Play Store"
+  lane :deploy do
+    production
+    upload_to_play_store(
+      track: "internal",
+      aab: "app/build/outputs/bundle/release/app-release.aab",
+      skip_upload_metadata: false,
+      skip_upload_images: false,
+      skip_upload_screenshots: false
+    )
+  end
+
+  desc "Upload screenshots and metadata to Play Store"
+  lane :upload_metadata do
+    upload_to_play_store(
+      track: "internal",
+      skip_upload_binary: true,
+      skip_upload_metadata: false,
+      skip_upload_images: false,
+      skip_upload_screenshots: false
+    )
+  end
+end

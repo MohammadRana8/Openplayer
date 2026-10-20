@@ -1,0 +1,27 @@
+# DRAFT: starting point only, not tested with F-Droid's build server.
+AntiFeatures:
+Categories:
+  - Audio
+License: MIT
+SourceCode: https://github.com/openplayer-project/openplayer
+IssueTracker: https://github.com/openplayer-project/openplayer/issues
+Changelog: https://github.com/openplayer-project/openplayer/releases
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+
+Builds:
+  - versionName: "0.1.0"
+    versionCode: 1
+    commit: "v0.1.0"
+    subdir: android
+    sdk: "34"
+    ndk: "26.1.10909125"
+    java: "17"
+    gradle: ["gradle"]
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs: []
+    rm: ""
+    sed: []
+    prebuild: "cd .. && npm install && npx expo prebuild --platform android --no-install"
+    build: ""
+    antifeatures: []

@@ -1,0 +1,41 @@
+OpenPlayer NOTICE File
+
+This product includes software developed by the OpenPlayer contributors.
+
+This product includes software from the following projects:
+
+1. React Native (BSD-3-Clause License)
+   Copyright (c) Meta Platforms, Inc. and affiliates.
+   https://github.com/facebook/react-native
+
+2. Expo (MIT License)
+   Copyright (c) Expo (formerly Expo Inc.)
+   https://github.com/expo/expo
+
+3. Drizzle ORM (Apache License 2.0)
+   Copyright (c) 2023-present Drizzle Labs
+   https://github.com/drizzle-team/drizzle-orm
+
+4. Zustand (MIT License)
+   Copyright (c) 2020 Paul Armstrong
+   https://github.com/pmndrs/zustand
+
+5. MMKV (BSD-3-Clause License)
+   Copyright (c) 2018-today Tencent, Ltd.
+   https://github.com/Tencent/MMKV
+
+6. react-native-gesture-handler (MIT License)
+   Copyright (c) software-mansion
+   https://github.com/software-mansion/react-native-gesture-handler
+
+7. react-native-reanimated (MIT License)
+   Copyright (c) software-mansion
+   https://github.com/software-mansion/react-native-reanimated
+
+8. react-native-safe-area-context (MIT License)
+    Copyright (c) Thibault Wittemberg
+    https://github.com/thibaultwittemberg
+
+9. react-native-screens (MIT License)
+    Copyright (c) Krzysztof Mikałajczyk
+    https://github.com/krzysztof-mikolajczyk

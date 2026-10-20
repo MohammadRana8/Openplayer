@@ -1,0 +1,33 @@
+default_platform(:android)
+
+platform :android do
+  before_all do
+    ensure_git_branch(branch: "main")
+  end
+
+  desc "Build debug APK"
+  lane :debug do
+    gradle(task: "assembleDebug")
+  end
+
+  desc "Build release AAB"
+  lane :release do
+    gradle(task: "assembleRelease")
+  end
+
+  desc "Build for F-Droid"
+  lane :fdroid do
+    gradle(task: "assembleRelease", print_command: false)
+    copy_artifacts(
+      artifacts: [
+        "app/build/outputs/apk/release/app-release-unsigned.apk"
+      ]
+    )
+  end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+  end
+end
